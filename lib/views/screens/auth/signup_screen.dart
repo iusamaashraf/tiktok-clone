@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tiktok_clone/constants.dart';
-import 'package:tiktok_clone/controllers/auth_controller.dart';
 import 'package:tiktok_clone/views/widgets/text_input_field.dart';
 
 class SignupScreen extends StatelessWidget {
@@ -73,6 +72,7 @@ class SignupScreen extends StatelessWidget {
                 controller: _passwordController,
                 labelText: 'Password',
                 icon: Icons.lock,
+                isObscure: true,
               ),
             ),
             const SizedBox(height: 30),

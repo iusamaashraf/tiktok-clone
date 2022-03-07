@@ -3,6 +3,16 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:tiktok_clone/controllers/auth_controller.dart';
+import 'package:tiktok_clone/views/screens/add_video_screen.dart';
+
+//for BOTTOM NAV BAR
+const pages = [
+  Text('Home Screen'),
+  Text('Search Screen'),
+  AddVideoScreen(),
+  Text('Messages Screen'),
+  Text('Profile Screen'),
+];
 
 // COLORS
 const backgroundColor = Colors.black;
