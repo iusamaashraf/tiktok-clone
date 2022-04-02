@@ -72,7 +72,7 @@ class AuthController extends GetxController {
           password: password,
         );
         String downloadUrl = await _uploadToStorage(image);
-        print('error is ' + downloadUrl);
+        // print('error is ' + downloadUrl);
 
         model.User user = model.User(
           name: username,
@@ -85,9 +85,9 @@ class AuthController extends GetxController {
             .doc(cred.user!.uid)
             .set(user.toJson())
             .then((value) {
-          print('data added successfully');
+          // print('data added successfully');
         }).catchError((e) {
-          print('error is $e');
+          // print('error is $e');
         });
       } else {
         Get.snackbar('Error creating account', 'Please enter all the fields');
@@ -102,7 +102,7 @@ class AuthController extends GetxController {
       if (email.isNotEmpty && password.isNotEmpty) {
         await firebaseAuth.signInWithEmailAndPassword(
             email: email.trim(), password: password);
-        print('log successfully');
+        // print('log successfully');
       } else {
         Get.snackbar('Error Logging in', 'Plase enter all fields');
       }

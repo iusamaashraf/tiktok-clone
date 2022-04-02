@@ -22,7 +22,7 @@ class ConfirmVideoScreen extends StatefulWidget {
 
 class _ConfirmVideoScreenState extends State<ConfirmVideoScreen> {
   late VideoPlayerController controller;
-  TextEditingController _songNameController = TextEditingController();
+  final TextEditingController _songNameController = TextEditingController();
   final TextEditingController _captionController = TextEditingController();
   UploadVideoController uploadVideoController =
       Get.put(UploadVideoController());
