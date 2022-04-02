@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tiktok_clone/constants.dart';
+import 'package:tiktok_clone/views/screens/auth/signup_screen.dart';
 import 'package:tiktok_clone/views/widgets/text_input_field.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -70,7 +72,9 @@ class LoginScreen extends StatelessWidget {
             Text("Don't have an account? ",
                 style: Theme.of(context).textTheme.subtitle1),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Get.to(() => SignupScreen());
+              },
               child: Text("Register",
                   style: Theme.of(context)
                       .textTheme

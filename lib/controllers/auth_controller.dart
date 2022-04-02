@@ -15,8 +15,9 @@ class AuthController extends GetxController {
   late Rx<User?> _user;
   late Rx<File?> _pickedImage;
   File? get profilePhoto => _pickedImage.value;
+  User get user => _user.value!;
 
-  //Now we want that is one person is login after restart an app this is not again login needed
+  //Now we want that is one person is login after restart an app this is no need to again login needed
   @override
   void onReady() {
     super.onReady();
