@@ -5,6 +5,8 @@ import 'package:tiktok_clone/controllers/video_controller.dart';
 import 'package:tiktok_clone/views/widgets/circle_animation.dart';
 import 'package:tiktok_clone/views/widgets/video_player_item.dart';
 
+import 'comment_screen.dart';
+
 class VideoScreen extends StatelessWidget {
   VideoScreen({Key? key}) : super(key: key);
   final VideoController videoController = Get.put(VideoController());
@@ -161,7 +163,9 @@ class VideoScreen extends StatelessWidget {
                                             .caption!
                                             .copyWith(color: Colors.white)),
                                     InkWell(
-                                      onTap: () {},
+                                      onTap: () => Get.to(() => CommentScreen(
+                                            id: data.id,
+                                          )),
                                       child: const Icon(
                                         Icons.comment,
                                         size: 40,
